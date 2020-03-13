@@ -20,6 +20,7 @@
     position: absolute;
     border: 8px solid #ccc;
     margin: 8px;
+    z-index: 1;
 }
 
 .row .box:nth-child(1) {
@@ -40,14 +41,28 @@
     left: 66%;
 }
 
-.row .box:nth-child(4) {
-    background-image: url('img/watch.jpg');
+.sale {
+    width: 25px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 11px;
+    z-index: 10;
 }
 
-.row .box:nth-child(5) {
-    background-image: url('img/coffee.jpg');
+.box:nth-child(even) .sale {
+    background-color: red;
 }
 
-.row .box:nth-child(6) {
-    background-image: url('img/coffee_maker.jpg');
+.box:nth-of-type(odd) .sale {
+    background-color: green;
+}
+
+.box:hover .heart{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
 }
