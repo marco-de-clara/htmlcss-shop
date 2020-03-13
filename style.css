@@ -52,17 +52,31 @@
 }
 
 .box:nth-child(even) .sale {
-    background-color: red;
+    background-color: #ff0000;
 }
 
 .box:nth-of-type(odd) .sale {
-    background-color: green;
+    background-color: #00ff00;
 }
 
-.box:hover .heart{
+.box:hover .overlay{
     background-color: rgba(0, 0, 0, 0.3);
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 20;
+}
+
+.fa-heart {
+    visibility: hidden;
+}
+
+.box:hover .fa-heart {
+    visibility: visible;
+    color: #dd2e44;
+    position: absolute;
+    bottom: 0;
+    margin-left: 50%;
+    font-size: 18px;
+    z-index: 30;
 }
